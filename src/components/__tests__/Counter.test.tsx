@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { mount, shallow } from 'enzyme';
 import { Counter } from '../Counter';
+import { fireEvent, render, screen } from "@testing-library/react";
 
-describe('CounterButton', () => {
+describe('Counter enzyme', () => {
   test('render component', () => {
     const wrapper = shallow(<Counter/>);
 
@@ -19,5 +20,26 @@ describe('CounterButton', () => {
 
     const paragraph = wrapper.find('p');
     expect(paragraph.text()).toBe('You clicked 2 times');
+  });
+});
+
+
+describe('Counter', () => {
+  test('render component', () => {
+    render(<Counter/>);
+
+    const paragraph = screen.getByText('You clicked 0 times');
+    expect(paragraph).toBeInTheDocument();
+  });
+
+  test('render component and increment counter', () => {
+    render(<Counter/>);
+    const button = screen.getByText('increment');
+
+    fireEvent.click(button);
+    fireEvent.click(button);
+
+    const paragraph = screen.queryByText('You clicked 2 times');
+    expect(paragraph).toBeInTheDocument();
   });
 });
