@@ -23,7 +23,6 @@ describe('Counter enzyme', () => {
   });
 });
 
-
 describe('Counter', () => {
   test('should render component', () => {
     render(<Counter/>);

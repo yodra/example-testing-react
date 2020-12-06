@@ -16,8 +16,8 @@ const renderRating = () => {
     decrement,
     increment,
     getRatingValue
-  }
-}
+  };
+};
 
 describe('Rating', () => {
   describe('render', () => {
