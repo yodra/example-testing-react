@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount, shallow } from 'enzyme';
 import { Counter } from '../Counter';
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from '@testing-library/react';
 
 describe('Counter enzyme', () => {
   test('should render component', () => {

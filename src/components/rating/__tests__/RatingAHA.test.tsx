@@ -1,6 +1,6 @@
-import { Rating } from "../Rating";
-import { fireEvent, render, screen } from "@testing-library/react";
-import React from "react";
+import { Rating } from '../Rating';
+import { fireEvent, render, screen } from '@testing-library/react';
+import React from 'react';
 
 const renderRating = () => {
   render(<Rating/>);

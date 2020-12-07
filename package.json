@@ -7,7 +7,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --max-warnings 0 . --ext .ts,.tsx"
+    "lint": "eslint --max-warnings 0 . --ext .ts,.tsx",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "@types/jest": "^26.0.15",
@@ -21,10 +23,16 @@
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
+    "@cowcoders/eslint-config": "^1.1.1",
+    "@storybook/addon-actions": "^6.1.10",
+    "@storybook/addon-essentials": "^6.1.10",
+    "@storybook/addon-links": "^6.1.10",
+    "@storybook/node-logger": "^6.1.10",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.10",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@cowcoders/eslint-config": "^1.1.1",
     "@types/enzyme": "^3.10.8",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "enzyme": "^3.11.0",
