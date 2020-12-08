@@ -13,7 +13,7 @@ export default {
 
 const Template: Story<ButtonProps> = (args) => <Button {...args}/>;
 const defaultArgs = {
-  label: 'Button',
+  children: 'Button',
   onClick: action('Clicked')
 };
 
