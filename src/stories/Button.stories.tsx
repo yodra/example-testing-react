@@ -1,8 +1,7 @@
 import React from 'react';
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
-
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { Button, ButtonProps } from './Button';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Example/Button',
@@ -13,26 +12,36 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args}/>;
+const defaultArgs = {
+  label: 'Button',
+  onClick: action('Clicked')
+};
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button'
+  ...defaultArgs,
+  primary: true
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button'
+  ...defaultArgs
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 'large',
-  label: 'Button'
+  ...defaultArgs,
+  size: 'large'
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'small',
-  label: 'Button'
+  ...defaultArgs,
+  size: 'small'
+};
+
+export const NoAccessible = Template.bind({});
+NoAccessible.args = {
+  ...defaultArgs,
+  backgroundColor: '#535758'
 };

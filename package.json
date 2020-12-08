@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@cowcoders/eslint-config": "^1.1.1",
+    "@storybook/addon-a11y": "^6.1.10",
     "@storybook/addon-actions": "^6.1.10",
     "@storybook/addon-essentials": "^6.1.10",
     "@storybook/addon-links": "^6.1.10",
